@@ -1,0 +1,38 @@
+html, body, div, span,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+img, b, i, ul, li,
+article, aside, figcaption, figure, 
+footer, header, menu, nav, section,
+audio, video {
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  vertical-align:baseline;
+  background:transparent;
+}
+
+html {
+  box-sizing: border-box;
+  font-size:62.5%;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body{
+  font-size:1.6rem;
+  overflow-x: hidden;
+  font-family: 'Dosis', sans-serif;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+  display:block;
+}
+
+nav ul,
+menu li {
+  list-style:none;
+}

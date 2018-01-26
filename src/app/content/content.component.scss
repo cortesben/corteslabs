@@ -1,0 +1,46 @@
+.content {
+    position:absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../../assets/DSC_0011.jpg);
+    animation: scaleIn 3.5s ease-in-out infinite alternate;
+
+    .panel {
+        position: relative;
+        width: 50%;
+        height: 100%;
+        color: white;
+        background-color: var(--primary-color);
+        box-shadow: 2px 0 10px 10px rgba(0,0,0,0.35);
+    }
+
+    .panel .copy{
+        position: relative;
+        width: 65%;
+        left: 17.5%;
+        padding: 10rem 2rem 2rem;
+        margin: 0;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 1.8rem;
+        line-height: 2.6rem;
+    }
+
+    .panel .logo{
+        display: none;
+        position: absolute;
+        bottom: 2rem;
+        left: 17.5%;
+        width: 6rem;
+    }
+
+    .panel .copy h1{
+        position: relative;
+        font-family: 'Quicksand', sans-serif;
+        font-weight: 700;
+        font-size: 3.6rem;
+        margin-bottom: 2rem;
+        border-bottom: 1px solid white;
+    }
+
+}

@@ -1,0 +1,10 @@
+/* animations */
+
+@keyframes scaleIn {
+    0% {
+        background-size: 105%;
+    }
+    100% {
+        background-size: 100%;
+    }
+}

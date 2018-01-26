@@ -1,2 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'resets';
+@import 'animations';
+
+
+:root {
+    --menu-height: 8rem;
+    --menu-item-width: 16rem;
+    --primary-color: rgb(241,192,101);
+}
+
+body {
+    font-family: 'Dosis', sans-serif;
+}

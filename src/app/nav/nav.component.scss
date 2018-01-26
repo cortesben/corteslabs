@@ -2,31 +2,42 @@ header {
     position: relative;
     top: -1px;
     z-index: 5;
-}
-header menu {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    height: var(--menu-height);
-    font-size: 3rem;
-    font-weight: 300;
-}
 
-header li {
-    padding: 2rem 2rem;
-    margin-left: 1px;
-    text-align: center;
-    color: white;
-    width: var(--menu-item-width);
-    background-color: black;
-    opacity: 0.4;
-    transition: opacity 250ms linear;
-}
+    menu {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        height: var(--menu-height);
+        font-size: 3rem;
+        font-weight: 300;
+    }
 
-header li.active {
-    color: var(--primary-color);
-    background-color: white;
-    /* box-shadow: [horizontal offset] [vertical offset] [blur radius] [optional spread radius] [color]; */
-    box-shadow: 2px 0 10px 0 rgba(0,0,0,0.45);
-    opacity: 1;
+    li {
+        padding: 2rem 2rem;
+        margin-left: 1px;
+        text-align: center;
+        color: white;
+        width: var(--menu-item-width);
+        background-color: black;
+        opacity: 0.4;
+        transition: all 250ms ease-in;
+    }
+
+    li.active {
+        color: var(--primary-color);
+        background-color: white;
+        /* box-shadow: [horizontal offset] [vertical offset] [blur radius] [optional spread radius] [color]; */
+        box-shadow: 2px 0 10px 0 rgba(0,0,0,0.45);
+        opacity: 1;
+    }
+
+    li:hover{
+        transform: translateY(-1rem);
+        color: black;
+        /* offset-x | offset-y | blur-radius | color */
+        // text-shadow: 1px -1px 4px rgba(255,255,255,.3);
+        opacity: 1;
+        background-color: rgba(255,255,255,0.7);
+    }
+
 }

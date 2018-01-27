@@ -9,6 +9,7 @@ import { ServicesComponent } from './services/services.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
 import { Globals } from './globals';
+import { ContactComponent } from './contact/contact.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { Globals } from './globals';
     NavComponent,
     BenComponent,
     ServicesComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

@@ -1,15 +1,19 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Globals } from './../globals';
 
 @Component({
   selector: 'ben-content',
   templateUrl: './ben.component.html'
 })
-export class BenComponent {
+export class BenComponent implements OnInit {
+  transitionStart: boolean;
 
   @Input() routeLoaded: boolean;
-  constructor(private globals: Globals){
-    // console.log(globals);
-    console.log(this.globals.loaded);
+  constructor(private globals: Globals) { }
+
+  ngOnInit() {
+    setTimeout(() => {
+      this.transitionStart = this.globals.loaded;
+    }, 0);
   }
 }

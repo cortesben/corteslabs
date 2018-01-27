@@ -11,29 +11,30 @@ import { Globals } from './globals';
 })
 export class AppComponent {
   title = 'Cortes Labs';
-  routeLoaded: boolean = false;
 
-  constructor(private router: Router, private globals: Globals) {
-    router.events.subscribe( (event: Event) => {
+  constructor(
+    private router: Router,
+    private globals: Globals) {
+
+    router.events.subscribe((event: Event) => {
 
       if (event instanceof NavigationStart) {
-          // Show loading indicator
-          this.globals.loaded = false;
+        // Show loading indicator
+        this.globals.loaded = false;
       }
 
       if (event instanceof NavigationEnd) {
-          // Hide loading indicator
-          console.log('NavigationEnd');
-          this.globals.loaded = true;
-          this.routeLoaded = true;
-          console.log('routeLoaded',this.routeLoaded);
+        // Hide loading indicator
+        console.log('NavigationEnd');
+        this.globals.loaded = true;
       }
 
       if (event instanceof NavigationError) {
-          // Hide loading indicator
-          // Present error to user
-          console.log(event.error);
+        // Hide loading indicator
+        // Present error to user
+        console.log(event.error);
       }
-  });
+    });
   }
+
 }

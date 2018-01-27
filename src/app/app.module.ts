@@ -8,6 +8,8 @@ import { Routing } from './app.routing';
 import { ServicesComponent } from './services/services.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
+import { Globals } from './globals';
+
 
 @NgModule({
   declarations: [
@@ -21,7 +23,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     BrowserModule,
     Routing
   ],
-  providers: [],
+  providers: [Globals],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

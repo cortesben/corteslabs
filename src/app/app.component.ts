@@ -12,11 +12,25 @@ import { Globals } from './globals';
 export class AppComponent {
   title = 'Cortes Labs';
 
+  randomColor(): string {
+    function newNumber(): number {
+      return Math.floor(Math.random() * 256);
+    }
+
+    function opacity(): number {
+      return Math.floor(Math.random() * 10);
+    }
+
+    return `rgba(${newNumber()}, ${newNumber()}, ${newNumber()}, 0.${opacity()})`;
+  }
+
   constructor(
     private router: Router,
     private globals: Globals) {
 
     router.events.subscribe((event: Event) => {
+
+      this.globals.randomColor = this.randomColor();
 
       if (event instanceof NavigationStart) {
         // Show loading indicator

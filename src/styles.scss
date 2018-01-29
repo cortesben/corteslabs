@@ -6,7 +6,10 @@
 :root {
     --menu-height: 8rem;
     --menu-item-width: 16rem;
-    --primary-color: rgb(241,192,101);
+    // --primary-color: rgb(241,192,101);
+    --primary-color: black;
+
+    --break-point-1: 960px;
 }
 
 body {

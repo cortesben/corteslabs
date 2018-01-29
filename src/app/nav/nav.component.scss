@@ -3,6 +3,26 @@ header {
     top: -1px;
     z-index: 5;
 
+    .icon {
+        padding: 5px;
+        width: 4rem;
+        height: 4rem;
+        display: none;
+        cursor: pointer;
+
+        @media screen and (max-width: 960px){
+            display: block;
+
+            & + menu {
+                display: none;
+            }
+
+            & + menu.open {
+                display: flex;
+            }
+        }
+    }
+
     menu {
         display: flex;
         justify-content: flex-end;
@@ -10,6 +30,10 @@ header {
         height: var(--menu-height);
         font-size: 3rem;
         font-weight: 300;
+
+        @media screen and (max-width: 960px){
+            justify-content: flex-start;
+        }
     }
 
     li {

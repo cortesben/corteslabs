@@ -42,6 +42,8 @@ header {
 
             &.open {
                 position: relative;
+                display: flex;
+                justify-content: space-around;
                 transform: translateY(0);
                 top: -4rem;
             }

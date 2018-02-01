@@ -1,24 +1,26 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router, Event, NavigationStart, NavigationEnd, NavigationError } from '@angular/router';
+import { Globals } from '../globals';
 
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.scss']
 })
-export class NavComponent implements OnInit {
-  isOpen: boolean = false;
+export class NavComponent {
 
   toggleMenu() {
-    this.isOpen = !this.isOpen;
+    this.globals.isOpen = !this.globals.isOpen;
   }
 
-  constructor(private router: Router){
+  constructor(
+    private router: Router,
+    private globals: Globals){
+
     router.events.subscribe((event: Event) => {
 
       if (event instanceof NavigationEnd) {
-        // Hide loading indicator
-        this.isOpen = false;
+        this.globals.isOpen = false;
       }
 
     });

@@ -1,6 +1,6 @@
 <section class="content" [ngStyle]="{'background-color': globals.randomColor}">
   <div class="panel" [ngClass]="{'loaded' : transitionStart}">
-      <div class="copy">
+      <div class="copy" [ngClass]="{'open': globals.isOpen}">
           <h1>Contact</h1>
           <p>Contact me form will show up here</p>
       </div>

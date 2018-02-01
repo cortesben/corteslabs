@@ -4,4 +4,5 @@ import { Injectable } from '@angular/core';
 export class Globals {
   loaded: boolean = false;
   randomColor: string = null;
+  isOpen: boolean = false;
 }

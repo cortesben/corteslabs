@@ -7,9 +7,45 @@
     --menu-height: 8rem;
     --menu-item-width: 16rem;
     // --primary-color: rgb(241,192,101);
-    --primary-color: black;
+    --primary-color: var(--color-1);
+    --accent-color: var(--color-2);
+    --accent-compliment: var(--color-6);
 
     --break-point-1: 960px;
+
+    /* color pallet */
+
+    // --color-1: rgb(54, 84, 79);
+    // --color-2: rgb(232, 202, 164);
+    // --color-3: rgb(31, 95, 97);
+    // --color-4: rgb(204, 42, 65);
+    // --color-5: rgb(11, 129, 133);
+
+    // --color-1: rgb(243, 138, 138);
+    // --color-2: rgb(85, 68, 61);
+    // --color-3: rgb(160, 202, 181);
+    // --color-4: rgb(205, 233, 202);
+    // --color-5: rgb(241, 237, 208);
+
+    // --color-1: rgb(65, 62, 74);
+    // --color-2: rgb(115, 98, 110);
+    // --color-3: rgb(179, 129, 132);
+    // --color-4: rgb(240, 180, 158);
+    // --color-5: rgb(247, 228, 190);
+
+    // --color-1: rgb(240, 240, 216);
+    // --color-2: rgb(180, 222, 190);
+    // --color-3: rgb(119, 204, 164);
+    // --color-4: rgb(102, 102, 102);
+    // --color-5: rgb(180, 223, 55);
+
+    --color-1: rgb(141, 204, 173);
+    --color-2: rgb(152, 136, 100);
+    --color-3: rgb(254, 166, 162);
+    --color-4: rgb(249, 214, 172);
+    --color-5: rgb(255, 233, 175);
+    --color-6: rgb(102, 102, 102);
+
 }
 
 body {

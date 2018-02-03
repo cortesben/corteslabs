@@ -1,7 +1,7 @@
-<section class="content" [ngStyle]="{'background-color': globals.randomColor}">
+<section class="content" [ngStyle]="{'background-color': 'var(--accent-compliment)'}">
   <div class="panel" [ngClass]="{'loaded' : transitionStart}">
       <div class="copy" [ngClass]="{'open': globals.isOpen}">
-          <h1>Contact</h1>
+        <h1 class="title">Contact</h1>
           <p>Contact me form will show up here</p>
       </div>
   </div>

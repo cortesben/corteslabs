@@ -12,6 +12,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { ContactComponent } from './contact/contact.component';
 
 import { Globals } from './globals';
+import { ColorsComponent } from './colors/colors.component';
 
 
 
@@ -22,7 +23,8 @@ import { Globals } from './globals';
     BenComponent,
     ServicesComponent,
     NotFoundComponent,
-    ContactComponent
+    ContactComponent,
+    ColorsComponent
   ],
   imports: [
     BrowserModule,

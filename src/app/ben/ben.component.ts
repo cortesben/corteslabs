@@ -9,7 +9,7 @@ export class BenComponent implements OnInit {
   transitionStart: boolean;
 
   @Input() routeLoaded: boolean;
-  constructor(private globals: Globals) { }
+  constructor(private globals: Globals) {}
 
   ngOnInit() {
     setTimeout(() => {

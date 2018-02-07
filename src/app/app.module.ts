@@ -8,7 +8,7 @@ import { environment } from '../environments/environment';
 
 import { AppComponent } from './app.component';
 
-import { Routing } from './app.routing';
+import { RoutingModule } from './routing/routing.module';
 
 import { NavComponent } from './nav/nav.component';
 import { BenComponent } from './ben/ben.component';
@@ -17,8 +17,6 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { ContactComponent } from './contact/contact.component';
 
 import { Globals } from './globals';
-
-
 
 @NgModule({
   declarations: [
@@ -31,7 +29,7 @@ import { Globals } from './globals';
   ],
   imports: [
     BrowserModule,
-    Routing,
+    RoutingModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase)
   ],

@@ -10,6 +10,10 @@ export class ServicesComponent implements OnInit {
 
   constructor(private globals: Globals){}
 
+  toggleNav() {
+    this.globals.isOpen = !this.globals.isOpen;
+  }
+
   ngOnInit() {
     setTimeout(() => {
       this.transitionStart = this.globals.loaded;

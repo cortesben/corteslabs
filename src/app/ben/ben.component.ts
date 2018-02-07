@@ -11,6 +11,10 @@ export class BenComponent implements OnInit {
   @Input() routeLoaded: boolean;
   constructor(private globals: Globals) {}
 
+  toggleNav() {
+    this.globals.isOpen = !this.globals.isOpen;
+  }
+
   ngOnInit() {
     setTimeout(() => {
       this.transitionStart = this.globals.loaded;

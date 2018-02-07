@@ -1,5 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabase } from 'angularfire2/database';
+import { ReactiveFormsModule } from '@angular/forms';
+
+import { environment } from '../environments/environment';
 
 import { AppComponent } from './app.component';
 
@@ -12,7 +17,6 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { ContactComponent } from './contact/contact.component';
 
 import { Globals } from './globals';
-import { ColorsComponent } from './colors/colors.component';
 
 
 
@@ -23,14 +27,15 @@ import { ColorsComponent } from './colors/colors.component';
     BenComponent,
     ServicesComponent,
     NotFoundComponent,
-    ContactComponent,
-    ColorsComponent
+    ContactComponent
   ],
   imports: [
     BrowserModule,
-    Routing
+    Routing,
+    ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebase)
   ],
-  providers: [Globals],
+  providers: [Globals, AngularFireDatabase],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

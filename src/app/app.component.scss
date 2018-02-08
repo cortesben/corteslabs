@@ -3,10 +3,8 @@
     top: 0;
     width: 100vw;
     height: 100vh;
-    // background-image: url(./../assets/DSC_0011.jpg);
     background-color: rgba(0,0,0, 0.5);
-    // animation: scaleIn 3.5s ease-in-out infinite alternate;
-    
+
     .close-nav {
         position: absolute;
         width: 100vw;
@@ -22,7 +20,7 @@
         background-color: var(--primary-color);
         box-shadow: 2px 0 10px 10px rgba(0,0,0,0.35);
         transform: translateY(-100vh);
-        transition: 400ms ease-out;
+        transition: 300ms ease-out;
 
         @media screen and (max-width: 960px){
             width: 100%;

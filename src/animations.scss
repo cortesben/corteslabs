@@ -1,4 +1,11 @@
 /* animations */
+:root{
+    --easeInBack: all 600ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    --easeOutQuart: all 600ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    --easeOutQuint: all 600ms cubic-bezier(0.23, 1, 0.32, 1);
+
+    --bounceIn: cubic-bezier(.01,1.52,.88,-0.07);
+}
 
 @keyframes scaleIn {
     0% {
@@ -8,3 +15,4 @@
         background-size: 100%;
     }
 }
+

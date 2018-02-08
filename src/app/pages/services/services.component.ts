@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { Globals } from './../globals';
+import { Globals } from './../../globals';
 
 @Component({
-  selector: 'app-not-found',
-  templateUrl: './not-found.component.html',
-  styleUrls: ['./not-found.component.scss']
+  selector: 'app-services',
+  templateUrl: './services.component.html'
 })
-export class NotFoundComponent implements OnInit {
+export class ServicesComponent implements OnInit {
   transitionStart: boolean;
 
   constructor(private globals: Globals){}

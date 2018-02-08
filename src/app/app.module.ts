@@ -11,10 +11,7 @@ import { AppComponent } from './app.component';
 import { RoutingModule } from './routing/routing.module';
 
 import { NavComponent } from './nav/nav.component';
-import { BenComponent } from './ben/ben.component';
-import { ServicesComponent } from './services/services.component';
-import { NotFoundComponent } from './not-found/not-found.component';
-import { ContactComponent } from './contact/contact.component';
+import { BenComponent, ServicesComponent, NotFoundComponent, ContactComponent } from './pages';
 
 import { Globals } from './globals';
 

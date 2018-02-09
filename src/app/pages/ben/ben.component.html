@@ -1,6 +1,6 @@
 <section class="content" [ngStyle]="{'background-color': 'var(--accent-compliment)'}">
     <div *ngIf="globals.isOpen" class="close-nav" (click)="toggleNav()"></div>
-    <div class="panel" [ngClass]="{'loaded' : transitionStart}">
+    <div class="panel" [ngClass]="{'loaded' : transitionStart, 'route-changing': globals.isFetching}">
         <div class="copy" [ngClass]="{'open': globals.isOpen}">
             <h1 class="title">Ben</h1>
             <p>Creating a clear path to communicate with technology can be challenging. As the web matured, so has best practices

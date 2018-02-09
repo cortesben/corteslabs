@@ -11,7 +11,7 @@ export class ServicesComponent implements OnInit {
   transitionStart: boolean;
   date: any;
 
-  constructor(private globals: Globals, private route: ActivatedRoute){}
+  constructor(private globals: Globals, private route: ActivatedRoute) { }
 
   toggleNav() {
     this.globals.isOpen = !this.globals.isOpen;
@@ -19,6 +19,7 @@ export class ServicesComponent implements OnInit {
 
   ngOnInit() {
     this.date = this.route.snapshot.data;
+    console.log(this.globals.isFetching);
     setTimeout(() => {
       this.transitionStart = this.globals.loaded;
     }, 0);

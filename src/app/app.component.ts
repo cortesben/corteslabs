@@ -36,12 +36,14 @@ export class AppComponent {
         console.log('NavigationStart');
         // Show loading indicator
         this.globals.loaded = false;
+        this.globals.isFetching = true;
       }
 
       if (event instanceof NavigationEnd) {
         // Hide loading indicator
         console.log('NavigationEnd');
         this.globals.loaded = true;
+        this.globals.isFetching = false;
       }
 
       if (event instanceof NavigationError) {

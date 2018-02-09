@@ -17,6 +17,7 @@
         width: 50%;
         height: 100%;
         color: white;
+        // color: var(--color-2);
         background-color: var(--primary-color);
         box-shadow: 2px 0 10px 10px rgba(0,0,0,0.35);
         transform: translateY(-100vh);
@@ -55,12 +56,13 @@
             }
 
             .title{
+                color: var(--color-2);
                 position: relative;
                 font-family: 'Quicksand', sans-serif;
                 font-weight: 700;
                 font-size: 3.6rem;
                 margin-bottom: 2rem;
-                border-bottom: 1px solid white;
+                border-bottom: 1px solid var(--color-2);
             }
         }
 

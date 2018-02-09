@@ -71,7 +71,8 @@ header {
         }
 
         &.active {
-            color: var(--primary-color);
+            // color: var(--primary-color);
+            color: var(--color-2);
             background-color: white;
             /* box-shadow: [horizontal offset] [vertical offset] [blur radius] [optional spread radius] [color]; */
             box-shadow: 2px 0 10px 0 rgba(0,0,0,0.45);

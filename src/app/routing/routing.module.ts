@@ -4,6 +4,8 @@ import { Routes, RouterModule } from '@angular/router';
 // Components
 import { BenComponent, ServicesComponent, NotFoundComponent, ContactComponent } from './../pages';
 
+import { RouteResolver } from './route.resolver';
+
 export const routes: Routes = [
   {
     path: '',
@@ -16,7 +18,8 @@ export const routes: Routes = [
   },
   {
     path: 'services',
-    component: ServicesComponent
+    component: ServicesComponent,
+    resolve: { message: RouteResolver }
   },
   {
     path: 'contact',
@@ -31,6 +34,6 @@ export const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forRoot(routes, { useHash: false })],
   exports: [RouterModule],
-  providers: []
+  providers: [RouteResolver]
 })
 export class RoutingModule { }

@@ -33,6 +33,7 @@ export class AppComponent {
       this.globals.randomColor = this.randomColor();
 
       if (event instanceof NavigationStart) {
+        console.log('NavigationStart');
         // Show loading indicator
         this.globals.loaded = false;
       }

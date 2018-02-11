@@ -41,7 +41,7 @@ export class ContactComponent implements OnInit {
 
   ngOnInit() {
     setTimeout(() => {
-      this.transitionStart = this.globals.loaded;
+      this.transitionStart = this.globals.hasLoaded;
     }, 0);
   }
 

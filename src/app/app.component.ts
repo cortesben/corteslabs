@@ -12,7 +12,11 @@ import { Globals } from './globals';
 export class AppComponent {
   title = 'Cortes Labs';
 
-  randomColor(): string {
+  constructor(
+    private router: Router,
+    private globals: Globals) { }
+
+  createRandomColor(): string {
     function newNumber(): number {
       return Math.floor(Math.random() * 256);
     }
@@ -24,33 +28,33 @@ export class AppComponent {
     return `rgba(${newNumber()}, ${newNumber()}, ${newNumber()}, 0.${opacity()})`;
   }
 
-  constructor(
-    private router: Router,
-    private globals: Globals) {
+  setNavState(event): void {
+    let e = event;
+    if (e instanceof NavigationStart) {
+      console.log('NavigationStart');
+      // Show loading indicator
+      this.globals.hasLoaded = false;
+      this.globals.isFetching = true;
+    }
 
-    router.events.subscribe((event: Event) => {
+    if (e instanceof NavigationEnd) {
+      // Hide loading indicator
+      console.log('NavigationEnd');
+      this.globals.hasLoaded = true;
+      this.globals.isFetching = false;
+    }
 
-      this.globals.randomColor = this.randomColor();
+    if (e instanceof NavigationError) {
+      // Hide loading indicator
+      // Present error to user
+      console.log(e.error);
+    }
+  }
 
-      if (event instanceof NavigationStart) {
-        console.log('NavigationStart');
-        // Show loading indicator
-        this.globals.loaded = false;
-        this.globals.isFetching = true;
-      }
-
-      if (event instanceof NavigationEnd) {
-        // Hide loading indicator
-        console.log('NavigationEnd');
-        this.globals.loaded = true;
-        this.globals.isFetching = false;
-      }
-
-      if (event instanceof NavigationError) {
-        // Hide loading indicator
-        // Present error to user
-        console.log(event.error);
-      }
+  ngOnInit() {
+    this.router.events.subscribe((event: Event) => {
+      this.globals.randomColor = this.createRandomColor();
+      this.setNavState(event);
     });
   }
 

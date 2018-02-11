@@ -1,24 +1,15 @@
-import { Component, OnInit } from '@angular/core';
-import { Globals } from './../../globals';
+import { Component } from '@angular/core';
+import { PageComponent } from './../pages.component';
 
 @Component({
   selector: 'app-not-found',
-  templateUrl: './not-found.component.html',
-  styleUrls: ['./not-found.component.scss']
+  templateUrl: './../pages.component.html',
+  styleUrls: ['./../pages.component.scss']
 })
-export class NotFoundComponent implements OnInit {
-  transitionStart: boolean;
-
-  constructor(private globals: Globals){}
-
-  toggleNav() {
-    this.globals.isOpen = !this.globals.isOpen;
-  }
-
-  ngOnInit() {
-    setTimeout(() => {
-      this.transitionStart = this.globals.loaded;
-    }, 0);
-  }
+export class NotFoundComponent extends PageComponent {
+  title: string = 'What ever you are looking for is not here!';
+  body: string[] = [
+    'You lost!'
+  ];
 
 }

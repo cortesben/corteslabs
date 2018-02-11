@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { Resolve } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
 import { Globals } from './../globals';
-import { setTimeout } from 'timers';
 
 @Injectable()
 export class RouteResolver implements Resolve<Observable<any>>{
@@ -14,7 +13,7 @@ export class RouteResolver implements Resolve<Observable<any>>{
     setTimeout(()=>{
       this.globals.isFetching = false;
     }, 250);
-    return Observable.of('I\'m in!').delay(255);
+    return Observable.of('I\'m in!').delay(300);
   }
 
 }

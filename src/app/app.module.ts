@@ -11,7 +11,7 @@ import { AppComponent } from './app.component';
 import { RoutingModule } from './routing/routing.module';
 
 import { NavComponent } from './nav/nav.component';
-import { BenComponent, ServicesComponent, NotFoundComponent, ContactComponent } from './pages';
+import { BenComponent, ServicesComponent, NotFoundComponent, ContactComponent, PageComponent} from './pages';
 
 import { Globals } from './globals';
 
@@ -22,7 +22,8 @@ import { Globals } from './globals';
     BenComponent,
     ServicesComponent,
     NotFoundComponent,
-    ContactComponent
+    ContactComponent,
+    PageComponent
   ],
   imports: [
     BrowserModule,

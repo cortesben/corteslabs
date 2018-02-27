@@ -14,12 +14,13 @@ export const routes: Routes = [
   },
   {
     path: 'ben',
-    component: BenComponent
+    component: BenComponent,
+    resolve: { message: RouteResolver }
   },
   {
     path: 'services',
     component: ServicesComponent,
-    // resolve: { message: RouteResolver }
+    resolve: { message: RouteResolver }
   },
   {
     path: 'contact',

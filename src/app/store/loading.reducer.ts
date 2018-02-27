@@ -1,9 +1,9 @@
 import { Action, ActionReducer } from "@ngrx/store";
 import { NAV_START, NAV_END, NAV_ERROR } from "./actions";
 
-import { IState } from './models';
+import { INavigation } from './models';
 
-export const State: IState = {
+export const State: INavigation = {
   isNavStart: false,
   isNavEnd: false,
   isNavError: false

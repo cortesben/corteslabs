@@ -12,7 +12,7 @@ import { BenComponent, ServicesComponent, NotFoundComponent, ContactComponent, P
 // ngrx
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { LoadingReducer } from './store';
+import { reducers } from './store';
 import { Globals } from './globals';
 
 @NgModule({
@@ -28,7 +28,7 @@ import { Globals } from './globals';
   imports: [
     BrowserModule,
     RoutingModule,
-    StoreModule.forRoot({navigation: LoadingReducer}),
+    StoreModule.forRoot(reducers),
     StoreDevtoolsModule.instrument()
   ],
   providers: [Globals],

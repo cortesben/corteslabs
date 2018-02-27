@@ -37,7 +37,6 @@ export class AppComponent {
 
   setNavState(e): void {
     if (e instanceof NavigationStart) {
-      console.log('NavigationStart');
       // Show loading indicator
       this.globals.hasLoaded = false;
       this.globals.isFetching = true;
@@ -46,10 +45,9 @@ export class AppComponent {
 
     if (e instanceof NavigationEnd) {
       // Hide loading indicator
-      console.log('NavigationEnd');
       this.globals.hasLoaded = true;
       this.globals.isFetching = false;
-      this.store.dispatch(setNavEnd(true));
+      // this.store.dispatch(setNavEnd(true));
     }
 
     if (e instanceof NavigationError) {

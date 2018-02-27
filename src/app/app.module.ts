@@ -1,18 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { AngularFireModule } from 'angularfire2';
-import { AngularFireDatabase } from 'angularfire2/database';
-import { ReactiveFormsModule } from '@angular/forms';
 
 import { environment } from '../environments/environment';
-
-import { AppComponent } from './app.component';
-
 import { RoutingModule } from './routing/routing.module';
 
+// components
+import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { BenComponent, ServicesComponent, NotFoundComponent, ContactComponent, PageComponent} from './pages';
 
+// ngrx
+import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { LoadingReducer } from './store';
 import { Globals } from './globals';
 
 @NgModule({
@@ -28,10 +28,10 @@ import { Globals } from './globals';
   imports: [
     BrowserModule,
     RoutingModule,
-    ReactiveFormsModule,
-    AngularFireModule.initializeApp(environment.firebase)
+    StoreModule.forRoot({navigation: LoadingReducer}),
+    StoreDevtoolsModule.instrument()
   ],
-  providers: [Globals, AngularFireDatabase],
+  providers: [Globals],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

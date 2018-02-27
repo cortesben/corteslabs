@@ -1,11 +1,17 @@
-<section class="content" [ngStyle]="{'background-color': 'var(--accent-compliment)'}">
-    <div *ngIf="globals.isOpen" class="close-nav" (click)="toggleNav()"></div>
-    <div class="panel" [ngClass]="{'loaded' : transitionStart}">
-        <div class="copy" [ngClass]="{'open': globals.isOpen}">
+<section
+    class="content"
+    [ngStyle]="{'background-color': 'var(--accent-compliment)'}">
+    <div *ngIf="globals.isOpen"
+        class="close-nav"
+        (click)="toggleNav()"></div>
+    <div
+        class="panel"
+        [ngClass]="{'loaded' : transitionStart}">
+        <div
+            class="copy"
+            [ngClass]="{'open': globals.isOpen}">
             <h1 class="title">{{title}}</h1>
-            <p *ngFor="let item of body">
-                {{item}}
-            </p>
+            <p *ngFor="let item of body">{{item}}</p>
         </div>
     </div>
 </section>

@@ -19,7 +19,7 @@ export const routes: Routes = [
   {
     path: 'services',
     component: ServicesComponent,
-    resolve: { message: RouteResolver }
+    // resolve: { message: RouteResolver }
   },
   {
     path: 'contact',

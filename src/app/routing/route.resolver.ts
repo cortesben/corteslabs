@@ -9,10 +9,9 @@ export class RouteResolver implements Resolve<Observable<any>>{
   constructor(private globals: Globals) { }
 
   resolve(): Observable<any>{
-    console.log(this.globals.isFetching);
     setTimeout(()=>{
       this.globals.isFetching = false;
-    }, 250);
+    }, 300);
     return Observable.of('I\'m in!').delay(300);
   }
 

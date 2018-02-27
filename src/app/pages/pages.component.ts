@@ -11,7 +11,7 @@ export class PageComponent implements OnInit {
   public body: string[];
   public transitionStart: boolean;
 
-  constructor(public globals: Globals) {}
+  constructor(public globals: Globals) { }
 
   toggleNav() {
     this.globals.isOpen = !this.globals.isOpen;

@@ -1,6 +1,12 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { Router, Event, NavigationStart, NavigationEnd, NavigationError } from '@angular/router';
 import { Globals } from './globals';
+import { Store } from '@ngrx/store';
+import { setNavEnd, setNavStart, setNavError } from './store';
+
+interface AppState {
+  nav: string;
+}
 
 
 @Component({
@@ -13,6 +19,7 @@ export class AppComponent {
   title = 'Cortes Labs';
 
   constructor(
+    private store: Store<AppState>,
     private router: Router,
     private globals: Globals) { }
 
@@ -28,13 +35,13 @@ export class AppComponent {
     return `rgba(${newNumber()}, ${newNumber()}, ${newNumber()}, 0.${opacity()})`;
   }
 
-  setNavState(event): void {
-    let e = event;
+  setNavState(e): void {
     if (e instanceof NavigationStart) {
       console.log('NavigationStart');
       // Show loading indicator
       this.globals.hasLoaded = false;
       this.globals.isFetching = true;
+      this.store.dispatch(setNavStart(true));
     }
 
     if (e instanceof NavigationEnd) {
@@ -42,12 +49,14 @@ export class AppComponent {
       console.log('NavigationEnd');
       this.globals.hasLoaded = true;
       this.globals.isFetching = false;
+      this.store.dispatch(setNavEnd(true));
     }
 
     if (e instanceof NavigationError) {
       // Hide loading indicator
       // Present error to user
       console.log(e.error);
+      this.store.dispatch(setNavError(true));
     }
   }
 

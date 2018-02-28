@@ -1,12 +1,13 @@
 import { Action, ActionReducer } from "@ngrx/store";
-import { NAV_START, NAV_END, NAV_ERROR } from "./actions";
+import { NAV_START, NAV_END, NAV_ERROR, NAV_OPEN, NAV_CLOSE } from "./actions";
 
 import { INavigation } from './models';
 
 export const State: INavigation = {
   isNavStart: false,
   isNavEnd: false,
-  isNavError: false
+  isNavError: false,
+  isNavOpen: false
 }
 
 export const LoadingReducer = (state = State, action) => {
@@ -27,6 +28,18 @@ export const LoadingReducer = (state = State, action) => {
       return {
         ...state,
         ...action.payload
+      }
+
+    case NAV_OPEN:
+      return {
+        ...state,
+        ...action.payload.isNavOpen
+      }
+
+    case NAV_CLOSE:
+      return {
+        ...state,
+        ...action.payload.isNavOpen
       }
 
     default:

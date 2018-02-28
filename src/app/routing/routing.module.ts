@@ -24,11 +24,13 @@ export const routes: Routes = [
   },
   {
     path: 'contact',
-    component: ContactComponent
+    component: ContactComponent,
+    resolve: { message: RouteResolver }
   },
   {
     path: '**',
-    component: NotFoundComponent
+    component: NotFoundComponent,
+    resolve: { message: RouteResolver }
   }
 ];
 

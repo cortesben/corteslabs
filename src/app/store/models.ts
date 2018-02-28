@@ -5,6 +5,7 @@ export interface INavigation {
     isNavStart: boolean;
     isNavEnd: boolean;
     isNavError: boolean;
+    isNavOpen: boolean;
 }
 
 export interface AppState {

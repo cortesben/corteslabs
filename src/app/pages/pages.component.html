@@ -6,7 +6,7 @@
         (click)="toggleNav()"></div>
     <div
         class="panel"
-        [ngClass]="{'loaded' : transitionStart}">
+        [ngClass]="{'loaded' : routeLoaded}">
         <div
             class="copy"
             [ngClass]="{'open': globals.isOpen}">

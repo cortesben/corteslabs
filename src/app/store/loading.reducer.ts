@@ -31,15 +31,11 @@ export const LoadingReducer = (state = State, action) => {
       }
 
     case NAV_OPEN:
-      return {
-        ...state,
-        ...action.payload.isNavOpen
-      }
-
     case NAV_CLOSE:
+    console.log(action.payload)
       return {
         ...state,
-        ...action.payload.isNavOpen
+        ...action.payload
       }
 
     default:

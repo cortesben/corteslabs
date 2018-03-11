@@ -1,15 +1,16 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core';
 import { Globals } from './../globals';
-import { getNavStart, getNavEnd } from '../store/loading.selectors';
+import { getNavStart, getNavEnd, getNavOpen } from '../store/loading.selectors';
 import { Store } from '@ngrx/store';
-import { AppState } from '../store';
+import { AppState, setNavClose, setNavOpen } from '../store';
 import { Observable } from 'rxjs/Observable';
 import { Subscription } from 'rxjs/Subscription';
 
 @Component({
   selector: 'app-page',
   templateUrl: './pages.component.html',
-  styleUrls: ['./pages.component.scss']
+  styleUrls: ['./pages.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PageComponent implements OnInit {
   public title: string;
@@ -17,15 +18,20 @@ export class PageComponent implements OnInit {
   public routeLoaded: boolean;
   public isNavEnd$: Observable<boolean>;
   public isNavEndSubscription: Subscription;
+  public isNavOpen$: Observable<boolean>;
 
-  constructor(public globals: Globals, protected store: Store<AppState>) {
-    this.isNavEnd$ = this.store.select(getNavEnd);
+  constructor(public globals: Globals, protected store: Store<AppState>) { }
+
+  closeNav() {
+    this.store.dispatch(setNavClose(false));
   }
 
-
   ngOnInit() {
-    this.isNavEndSubscription = this.isNavEnd$.subscribe(boolean => {
+    this.isNavOpen$ = this.store.select(getNavOpen);
+
+    this.isNavEndSubscription = this.store.select(getNavEnd).subscribe(boolean => {
       this.routeLoaded = boolean;
+      this.store.dispatch(setNavClose(false));
     });
   }
 

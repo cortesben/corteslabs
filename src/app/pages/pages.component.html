@@ -1,15 +1,15 @@
 <section
     class="content"
     [ngStyle]="{'background-color': 'var(--accent-compliment)'}">
-    <div *ngIf="globals.isOpen"
+    <div *ngIf="isNavOpen$|async"
         class="close-nav"
-        (click)="toggleNav()"></div>
+        (click)="closeNav()"></div>
     <div
         class="panel"
         [ngClass]="{'loaded' : routeLoaded}">
         <div
             class="copy"
-            [ngClass]="{'open': globals.isOpen}">
+            [ngClass]="{'open': (isNavOpen$|async)}">
             <h1 class="title">{{title}}</h1>
             <p *ngFor="let item of body">{{item}}</p>
         </div>

@@ -51,10 +51,11 @@
                 padding-top: 6rem;
                 width: 100%;
                 left: 0;
-                transition: all 250ms ease-in;
+                transition: all 200ms ease-in;
 
                 &.open{
                     transform: scale(0.92) translateY(-1rem);
+                    filter: blur(2px);
                     opacity: 0.3;
                 }
             }

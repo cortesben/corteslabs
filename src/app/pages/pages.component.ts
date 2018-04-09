@@ -16,7 +16,7 @@ export class PageComponent implements OnInit {
   public title: string;
   public body: string[];
   public routeLoaded: boolean;
-  public isNavEnd$: Observable<boolean>;
+
   public isNavEndSubscription: Subscription;
   public isNavOpen$: Observable<boolean>;
 

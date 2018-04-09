@@ -15,7 +15,7 @@ header {
         cursor: pointer;
         top: -4rem;
         transform: translateY(100%);
-        transition: transform 250ms ease-in;
+        transition: transform var(--time) ease-in;
 
         &.open{
             transform: translateY(-100%);
@@ -41,7 +41,7 @@ header {
 
         @media screen and (max-width: 960px){
             transform: translateY(-150%);
-            transition: transform 250ms ease-in;
+            transition: transform var(--time) ease-in;
 
             &.open {
                 position: relative;
@@ -61,7 +61,7 @@ header {
         width: var(--menu-item-width);
         background-color: black;
         opacity: 0.4;
-        transition: all 250ms ease-in;
+        transition: all var(--time) ease-in;
 
         @media screen and (max-width: 960px){
             display: flex;
@@ -74,10 +74,8 @@ header {
         }
 
         &.active {
-            // color: var(--primary-color);
             color: var(--color-2);
             background-color: white;
-            /* box-shadow: [horizontal offset] [vertical offset] [blur radius] [optional spread radius] [color]; */
             box-shadow: 2px 0 10px 0 rgba(0,0,0,0.45);
             opacity: 1;
         }
@@ -87,8 +85,6 @@ header {
             &:hover{
                 transform: translateY(-1rem);
                 color: black;
-                /* offset-x | offset-y | blur-radius | color */
-                // text-shadow: 1px -1px 4px rgba(255,255,255,.3);
                 opacity: 1;
                 background-color: rgba(255,255,255,0.7);
             }

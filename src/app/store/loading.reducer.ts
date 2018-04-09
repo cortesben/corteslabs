@@ -32,7 +32,6 @@ export const LoadingReducer = (state = State, action) => {
 
     case NAV_OPEN:
     case NAV_CLOSE:
-    console.log(action.payload)
       return {
         ...state,
         ...action.payload

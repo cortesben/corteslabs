@@ -1,6 +1,7 @@
 <section
     class="content"
     [ngStyle]="{'background-color': 'var(--accent-compliment)'}">
+
     <div *ngIf="isNavOpen$|async"
         class="close-nav"
         (click)="closeNav()"></div>

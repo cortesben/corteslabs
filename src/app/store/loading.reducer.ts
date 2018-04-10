@@ -10,7 +10,7 @@ export const State: INavigation = {
   isNavOpen: false
 }
 
-export const LoadingReducer = (state = State, action) => {
+export function LoadingReducer(state = State, action) {
   switch (action.type) {
     case NAV_START:
       return {

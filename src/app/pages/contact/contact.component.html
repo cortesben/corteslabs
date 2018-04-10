@@ -1,7 +1,7 @@
 <section class="content" [ngStyle]="{'background-color': 'var(--accent-compliment)'}">
-  <div *ngIf="globals.isOpen" class="close-nav" (click)="toggleNav()"></div>
+  <div *ngIf="true" class="close-nav" (click)="toggleNav()"></div>
   <div class="panel" [ngClass]="{'loaded' : transitionStart}">
-    <div class="copy" [ngClass]="{'open': globals.isOpen}">
+    <div class="copy" [ngClass]="{'open': true}">
       <h1 class="title">Contact the God!</h1>
 
       <!-- <form [formGroup]="form" (ngSubmit)="onSubmit()">

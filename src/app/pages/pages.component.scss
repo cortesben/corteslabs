@@ -14,6 +14,9 @@
 
     .panel {
         position: relative;
+        display:flex;
+        justify-content: center;
+        align-items: flex-start;
         width: 50%;
         height: 100%;
         color: white;
@@ -21,11 +24,13 @@
         box-shadow: 2px 0 10px 10px rgba(0,0,0,0.35);
         transform: translateY(-100vh);
         transition: transform 300ms ease-out;
+        overflow-y: auto;
 
         @media screen and (max-width: 960px){
             width: 100%;
             height: 95vh;
             overflow-x: auto;
+            -webkit-overflow-scrolling: auto;
         }
 
         &.loaded{
@@ -34,13 +39,22 @@
 
         .copy{
             position: relative;
-            width: 65%;
-            left: 17.5%;
+            width: 80%;
+            height: 100%;
             padding: 10rem 2rem 2rem;
             margin: 0;
             font-family: 'Quicksand', sans-serif;
             font-size: 1.8rem;
             line-height: 2.6rem;
+            -webkit-overflow-scrolling: touch;
+
+            p{
+                margin-bottom: 1rem;
+
+                &:last-child{
+                    margin-bottom: none;
+                }
+            }
 
             @media screen and (max-width: 960px){
                 padding-top: 6rem;

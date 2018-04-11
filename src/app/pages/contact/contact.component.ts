@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Globals } from './../../globals';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AngularFireDatabase } from 'angularfire2/database';
 
@@ -13,7 +12,6 @@ export class ContactComponent implements OnInit {
   form: FormGroup;
 
   constructor(
-    private globals: Globals,
     private fb: FormBuilder,
     private afdb: AngularFireDatabase) { }
 
@@ -35,14 +33,10 @@ export class ContactComponent implements OnInit {
       `;
     let formRequest = { name, email, message, date, html };
     console.log(this.afdb)
-    // this.afdb.list('/messages').push(formRequest);
     this.form.reset();
   }
 
   ngOnInit() {
-    setTimeout(() => {
-      this.transitionStart = this.globals.hasLoaded;
-    }, 0);
   }
 
 }

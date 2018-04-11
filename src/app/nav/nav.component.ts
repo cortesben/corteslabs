@@ -1,5 +1,4 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
-import { Router, Event, NavigationStart, NavigationEnd, NavigationError } from '@angular/router';
 
 // ngrx
 import { Observable } from 'rxjs/Observable';
@@ -16,19 +15,16 @@ import { AppState, setNavOpen, setNavClose } from '../store';
   styleUrls: ['./nav.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class NavComponent implements OnInit{
+export class NavComponent implements OnInit {
   public isNavOpen$: Observable<boolean>;
 
   toggleMenu() {
     this.store.dispatch(setNavOpen(true));
   }
 
-  constructor(
-    private router: Router,
-    protected store: Store<AppState>) {
-  }
+  constructor(protected store: Store<AppState>) {}
 
-  ngOnInit(){
+  ngOnInit() {
     this.isNavOpen$ = this.store.select(getNavOpen);
   }
 

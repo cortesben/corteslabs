@@ -1,16 +1,28 @@
 <section class="content" [ngStyle]="{'background-color': 'var(--accent-compliment)'}">
-  <div *ngIf="true" class="close-nav" (click)="toggleNav()"></div>
-  <div class="panel" [ngClass]="{'loaded' : transitionStart}">
-    <div class="copy" [ngClass]="{'open': true}">
-      <h1 class="title">Contact the God!</h1>
 
-      <!-- <form [formGroup]="form" (ngSubmit)="onSubmit()">
-        <input type="text" placeholder="Name" formControlName="name">
-        <input type="text" placeholder="Email" formControlName="email">
-        <textarea placeholder="Message" formControlName="message"></textarea>
-        <button type="submit" [disabled]="form.invalid">Submit</button>
-      </form> -->
-
+  <div *ngIf="isNavOpen$|async" class="close-nav" (click)="closeNav()"></div>
+  <div class="panel" [ngClass]="{'loaded' : routeLoaded}">
+    <div class="copy" [ngClass]="{'open': (isNavOpen$|async)}">
+      <form name="contact" method="POST" netlify>
+        <p>
+          <label>Your Name:
+            <input type="text" name="name">
+          </label>
+        </p>
+        <p>
+          <label>Your Email:
+            <input type="email" name="email">
+          </label>
+        </p>
+        <p>
+          <label>Message:
+            <textarea name="message"></textarea>
+          </label>
+        </p>
+        <p>
+          <button type="submit">Send</button>
+        </p>
+      </form>
     </div>
   </div>
 </section>

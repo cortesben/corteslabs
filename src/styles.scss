@@ -6,7 +6,7 @@
 :root {
     --menu-height: 8rem;
     --menu-item-width: 16rem;
-    // --primary-color: rgb(241,192,101);
+
     --primary-color: var(--color-1);
     --accent-color: var(--color-2);
     --accent-compliment: var(--color-6);
@@ -51,6 +51,12 @@
     --color-3: rgb(235, 235, 188);
     --color-4: rgb(188, 227, 197);
     --color-5: rgb(130, 179, 174);
+
+    // --color-1: rgb(109, 34, 67);
+    // --color-2: rgb(186, 38, 64);
+    // --color-3: rgb(236, 94, 12);
+    // --color-4: rgb(247, 143, 30);
+    // --color-5: rgb(133, 135, 26);
 
 }
 

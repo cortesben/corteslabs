@@ -1,5 +1,4 @@
 import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core';
-import { Globals } from './../globals';
 import { getNavStart, getNavEnd, getNavOpen } from '../store/loading.selectors';
 import { Store } from '@ngrx/store';
 import { AppState, setNavClose, setNavOpen } from '../store';
@@ -20,7 +19,7 @@ export class PageComponent implements OnInit {
   public isNavEndSubscription: Subscription;
   public isNavOpen$: Observable<boolean>;
 
-  constructor(public globals: Globals, protected store: Store<AppState>) { }
+  constructor(protected store: Store<AppState>) { }
 
   closeNav() {
     this.store.dispatch(setNavClose(false));

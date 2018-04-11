@@ -13,7 +13,7 @@ import { BenComponent, ServicesComponent, NotFoundComponent, ContactComponent, P
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { reducers } from './store';
-import { Globals } from './globals';
+
 
 @NgModule({
   declarations: [
@@ -31,7 +31,6 @@ import { Globals } from './globals';
     StoreModule.forRoot(reducers),
     StoreDevtoolsModule.instrument()
   ],
-  providers: [Globals],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

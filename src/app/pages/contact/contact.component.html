@@ -1,8 +1,8 @@
 <section class="content" [ngStyle]="{'background-color': 'var(--accent-compliment)'}">
 
-  <div *ngIf="isNavOpen$|async" class="close-nav" (click)="closeNav()"></div>
-  <div class="panel" [ngClass]="{'loaded' : routeLoaded}">
-    <div class="copy" [ngClass]="{'open': (isNavOpen$|async)}">
+  <div class="close-nav" ></div>
+  <div class="panel" >
+    <div class="copy" >
       <form name="contact" method="POST" netlify>
         <p>
           <label>Your Name:

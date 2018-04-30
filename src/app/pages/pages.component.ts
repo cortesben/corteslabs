@@ -26,6 +26,7 @@ export class PageComponent implements OnInit {
   }
 
   ngOnInit() {
+
     this.isNavOpen$ = this.store.select(getNavOpen);
 
     this.isNavEndSubscription = this.store.select(getNavEnd).subscribe(boolean => {

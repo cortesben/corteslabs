@@ -31,6 +31,7 @@ export class PageComponent implements OnInit {
 
     this.isNavEndSubscription = this.store.select(getNavEnd).subscribe(boolean => {
       this.routeLoaded = boolean;
+      console.log('this.routeLoaded',this.routeLoaded);
       this.store.dispatch(setNavClose(false));
     });
   }

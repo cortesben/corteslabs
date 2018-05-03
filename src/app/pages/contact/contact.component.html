@@ -1,9 +1,6 @@
-<section class="content" [ngStyle]="{'background-color': 'var(--accent-compliment)'}">
+<app-page>
 
-  <div class="close-nav" ></div>
-  <div class="panel" >
-    <div class="copy" >
-      <form name="contact" method="POST" netlify>
+    <form name="contact" method="POST" netlify>
         <p>
           <label>Your Name:
             <input type="text" name="name">
@@ -23,6 +20,8 @@
           <button type="submit">Send</button>
         </p>
       </form>
-    </div>
-  </div>
-</section>
+
+</app-page>
+
+<h1 [textContent]=" (isNavOpen$|async) ? 'Yes' : 'No' "></h1>
+<h2 [textContent]=" routeLoaded ? 'route loaded' : 'route did not load'"></h2>

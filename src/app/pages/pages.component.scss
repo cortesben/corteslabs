@@ -3,7 +3,8 @@
     top: 0;
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(90deg, var(--color-1), black);
+    background-color: var(--color-2);
+    // background: linear-gradient(90deg, var(--color-1), var(--color-2));
 
     .close-nav {
         position: absolute;
@@ -57,7 +58,7 @@
                 }
             }
 
-            @media screen and (max-width: 960px){
+            @media screen and (max-width: 965px){
                 padding-top: 6rem;
                 width: 100%;
                 left: 0;

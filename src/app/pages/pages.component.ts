@@ -12,10 +12,11 @@ import { Subscription } from 'rxjs/Subscription';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PageComponent implements OnInit {
-  public title: string;
-  public body: string[];
-  public routeLoaded: boolean;
+  @Input() title: string;
+  @Input() body?: string[];
+  @Input() routeLoaded: boolean;
 
+  // public routeLoaded: boolean;
   public isNavEndSubscription: Subscription;
   public isNavOpen$: Observable<boolean>;
 
@@ -26,12 +27,10 @@ export class PageComponent implements OnInit {
   }
 
   ngOnInit() {
-
     this.isNavOpen$ = this.store.select(getNavOpen);
 
     this.isNavEndSubscription = this.store.select(getNavEnd).subscribe(boolean => {
       this.routeLoaded = boolean;
-      console.log('this.routeLoaded',this.routeLoaded);
       this.store.dispatch(setNavClose(false));
     });
   }

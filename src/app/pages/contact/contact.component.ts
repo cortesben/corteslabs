@@ -1,9 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { AppState, setNavClose } from '../../store';
+
+// store
 import { Store } from '@ngrx/store';
+import { AppState, setNavClose } from '../../store';
 import { getNavOpen, getNavEnd } from '../../store/loading.selectors';
 import { Observable } from 'rxjs/Observable';
+
+// component
 import { PageComponent } from './../pages.component';
 
 @Component({
@@ -12,23 +15,15 @@ import { PageComponent } from './../pages.component';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent extends PageComponent implements OnInit {
-  form: FormGroup;
+
+  title: string = 'Contact';
 
   constructor(protected store: Store<AppState>) {
     super(store);
   }
 
   ngOnInit() {
-    this.isNavOpen$ = this.store.select(getNavOpen);
-
-    this.isNavEndSubscription = this.store.select(getNavEnd).subscribe(boolean => {
-      this.routeLoaded = boolean;
-      console.log('this.routeLoaded',this.routeLoaded);
-      this.store.dispatch(setNavClose(false));
-    });
-  }
-
-  ngOnDestroy() {
+    super.ngOnInit();
   }
 
 }

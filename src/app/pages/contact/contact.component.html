@@ -1,27 +1,25 @@
-<app-page>
+<app-page [title]='title' [body]='body' [routeLoaded]='routeLoaded'>
 
-    <form name="contact" method="POST" netlify>
-        <p>
-          <label>Your Name:
-            <input type="text" name="name">
-          </label>
-        </p>
-        <p>
-          <label>Your Email:
-            <input type="email" name="email">
-          </label>
-        </p>
-        <p>
-          <label>Message:
-            <textarea name="message"></textarea>
-          </label>
-        </p>
-        <p>
-          <button type="submit">Send</button>
-        </p>
-      </form>
+  <ul>
+    <li>
+      <a class="email" href="mailto:ben@bencortes.com">ben@bencortes.com</a>
+    </li>
+    <li class="gitHub">
+      <a target="_blank" href="https://github.com/cortesben/">
+        <span>GitHub</span>
+      </a>
+    </li>
+    <li class="twitter">
+      <a target="_blank" href="https://twitter.com/cortesben">
+        <span>Twitter</span>
+      </a>
+    </li>
+    <li class="linkedIn">
+      <a target="_blank" href="https://www.linkedin.com/in/bencortes">
+        <span>LinkedIn</span>
+      </a>
+    </li>
+  </ul>
+
 
 </app-page>
-
-<h1 [textContent]=" (isNavOpen$|async) ? 'Yes' : 'No' "></h1>
-<h2 [textContent]=" routeLoaded ? 'route loaded' : 'route did not load'"></h2>

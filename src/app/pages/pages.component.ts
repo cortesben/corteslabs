@@ -16,7 +16,6 @@ export class PageComponent implements OnInit {
   @Input() body?: string[];
   @Input() routeLoaded: boolean;
 
-  // public routeLoaded: boolean;
   public isNavEndSubscription: Subscription;
   public isNavOpen$: Observable<boolean>;
 

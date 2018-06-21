@@ -27,13 +27,14 @@ header {
         }
     }
 
-    menu {
+    nav {
         display: flex;
         justify-content: flex-end;
         align-items: center;
         height: var(--menu-height);
         font-size: 3rem;
         font-weight: 300;
+        list-style: none;
 
         @media screen and (max-width: 960px){
             justify-content: flex-start;
@@ -41,15 +42,15 @@ header {
         }
 
         @media screen and (max-width: 960px){
-            transform: translateY(-150%);
+            position: relative;
+            display: flex;
+            justify-content: space-around;
+            top: -4rem;
             transition: transform var(--time) ease-in;
+            transform: translateY(-150%);
 
             &.open {
-                position: relative;
-                display: flex;
-                justify-content: space-around;
                 transform: translateY(0);
-                top: -4rem;
             }
         }
     }

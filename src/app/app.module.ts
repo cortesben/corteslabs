@@ -11,8 +11,13 @@ import { BenComponent, ServicesComponent, NotFoundComponent, ContactComponent, P
 
 // ngrx
 import { StoreModule } from '@ngrx/store';
-import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { reducers } from './store';
+
+// redux dev tools
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+
+// pwa
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 
 @NgModule({
@@ -29,7 +34,8 @@ import { reducers } from './store';
     BrowserModule,
     RoutingModule,
     StoreModule.forRoot(reducers),
-    StoreDevtoolsModule.instrument()
+    StoreDevtoolsModule.instrument(),
+    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
   bootstrap: [AppComponent]
 })

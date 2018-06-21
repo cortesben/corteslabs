@@ -8,10 +8,10 @@
         </g>
       </svg>
   </div>
-  <menu [ngClass]="{'open': (isNavOpen$|async)}">
+  <nav [ngClass]="{'open': (isNavOpen$|async)}">
       <li routerLink="/ben" routerLinkActive="active">ben</li>
       <li routerLink="/services" routerLinkActive="active">services</li>
       <!-- <li routerLink="/anything" routerLinkActive="active">404</li> -->
       <li routerLink="/contact" routerLinkActive="active">contact</li>
-  </menu>
+  </nav>
 </header>

@@ -12,6 +12,10 @@
             [ngClass]="{'open': (isNavOpen$|async)}">
             <h1 class="title">{{title}}</h1>
             <p *ngFor="let item of body">{{item}}</p>
+            <div *ngIf="siteTech">
+                <h2 class="title">FE Tech</h2>
+                <p *ngFor="let item of siteTech">{{item}}</p>
+            </div>
             <ng-content></ng-content>
         </div>
     </div>

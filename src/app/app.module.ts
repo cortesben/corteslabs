@@ -18,6 +18,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 // pwa
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { IconHamComponent } from './icon-ham/icon-ham.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     ServicesComponent,
     NotFoundComponent,
     ContactComponent,
-    PageComponent
+    PageComponent,
+    IconHamComponent
   ],
   imports: [
     BrowserModule,

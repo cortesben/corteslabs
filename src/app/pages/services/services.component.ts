@@ -15,5 +15,12 @@ export class ServicesComponent extends PageComponent {
     'Custom enhancements to your existing websites/application',
     'Custom features to your existing website/application'
   ];
+  siteTech: string[] = [
+    'JAMstack site',
+    'Javascript',
+    'Components',
+    'SCSS for Styling',
+    'HTML'
+  ];
 
 }

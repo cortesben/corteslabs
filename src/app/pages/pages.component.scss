@@ -20,7 +20,7 @@
         width: 50%;
         height: 100%;
         color: white;
-        background-color: var(--primary-color);
+        background-color: black;
         box-shadow: 2px 0 10px 10px rgba(0,0,0,0.35);
         transform: translateY(-100vh);
         transition: transform 300ms ease-out;
@@ -45,7 +45,10 @@
             font-family: 'Quicksand', sans-serif;
             font-size: 1.8rem;
             line-height: 2.6rem;
-            // -webkit-overflow-scrolling: touch;
+
+            & > div{
+                margin-top: 3rem;
+            }
 
             p{
                 margin-bottom: 1rem;
@@ -56,20 +59,18 @@
                 }
             }
 
-            @media screen and (max-width: 965px){
+            @media screen and (max-width: 965px) {
                 padding-top: 6rem;
                 width: 100%;
                 left: 0;
                 transition: all 200ms ease-in;
 
                 &.open{
-                    transform: scale(0.92) translateY(-1rem);
                     filter: blur(2px);
-                    opacity: 0.3;
                 }
             }
 
-            .title{
+            .title {
                 color: var(--color-2);
                 position: relative;
                 font-family: 'Quicksand', sans-serif;
@@ -80,7 +81,7 @@
             }
         }
 
-        .logo{
+        .logo {
             display: none;
             position: absolute;
             bottom: 2rem;

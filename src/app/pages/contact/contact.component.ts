@@ -16,7 +16,7 @@ import { PageComponent } from './../pages.component';
 })
 export class ContactComponent extends PageComponent implements OnInit {
 
-  title: string = 'Contact';
+  title = 'Contact';
 
   constructor(protected store: Store<AppState>) {
     super(store);

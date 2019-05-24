@@ -12,4 +12,6 @@ export class NotFoundComponent extends PageComponent {
     'You lost!'
   ];
 
+  siteTech = false;
+
 }

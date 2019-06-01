@@ -27,11 +27,11 @@ export const routes: Routes = [
     component: ContactComponent,
     resolve: { message: RouteResolver }
   },
-  {
-    path: '**',
-    component: NotFoundComponent,
-    resolve: { message: RouteResolver }
-  }
+  // {
+  //   path: '**',
+  //   component: NotFoundComponent,
+  //   resolve: { message: RouteResolver }
+  // }
 ];
 
 @NgModule({
